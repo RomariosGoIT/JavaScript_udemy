@@ -117,17 +117,59 @@
 // }
 
 
-const lines = 5;
-let result = '';
+// const lines = 5;
+// let result = '';
 
-for (let i = 0; i <= lines; i++) {
-    for (let j = 0; j < lines - i; j++) {
-        result += ' ';
-    }
-    for (let j = 0; j < 2 * i + 1; j++) {
-        result += '*';
-    }
-    result += '\n';
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += ' ';
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         result += '*';
+//     }
+//     result += '\n';
+// }
+
+// console.log(result);
+
+
+
+const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?', '');
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {  },
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+if (personalMovieDB.count < 10 && personalMovieDB.count > 0) {
+  alert('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count  >= 10 && personalMovieDB.count < 30) {
+  alert('Вы классический зритель');
+} else if (personalMovieDB.count >= 30) {
+  alert('Вы киноман');
+} else {
+  alert('Error!');
 }
 
-console.log(result);
+console.log(personalMovieDB.count);
+
+// for (let i = 0; i < 2; i++) {
+//   const a = prompt('Один из последних просмотренных фильмов?', ''),
+//       b = prompt('На сколько оцените его?', '');
+
+//     if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+//       personalMovieDB.movies[a] = b;
+//       console.log('Done!');
+//     } else {
+//       console.log('Error!');
+//       i--;
+//     }
+
+      
+// }
+
+
+console.log(personalMovieDB);
