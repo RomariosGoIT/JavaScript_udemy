@@ -64,7 +64,7 @@ function showMyDB (hidden) {
   }
 }
 
-showMyDB(personalMovieDB.privat);
+// showMyDB(personalMovieDB.privat);
 
 
 function writeYourGenres () {
@@ -74,7 +74,7 @@ function writeYourGenres () {
     }
 }
 
-writeYourGenres();
+// writeYourGenres();
 
 
 
