@@ -46,4 +46,43 @@ function getCoupeNumber(a) {
   }
 }
 
-console.log(getCoupeNumber(0));
+// console.log(getCoupeNumber(0));
+
+
+function getTimeFromMinutes(min) {
+  let h = Math.floor(min / 60),
+      m = min - h * 60; 
+  if(isNaN(min) || !Number.isInteger(min) || min < 0 || min > 600 ) {
+    return 'Ошибка, проверьте данные';
+  } else if (h >= 2) {    
+    return `Это ${h} часа и ${m} минут`;
+  } else if (h < 1) {
+    return `Это ${h} часов и ${m} минут`;
+  } else {
+    return `Это ${h} час и ${m} минут`;
+  }
+ 
+}
+
+console.log(getTimeFromMinutes(50));
+
+
+function findMaxNumber(...arg) {
+
+  let result;
+
+  for(let i = 0; i < arg.length; i++) {
+    if (typeof(arg[i]) !== 'number' || arg.length < 4 )
+    result = 0;
+  }
+
+  if(result == 0) {
+    return result;
+  } else {
+    return Math.max.apply(null,arg);
+  }
+}
+
+
+console.log(findMaxNumber(1, 5, 6.6, 11));
+console.log(findMaxNumber(1, 5, '6', '10'));
