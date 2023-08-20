@@ -84,5 +84,36 @@ function findMaxNumber(...arg) {
 }
 
 
-console.log(findMaxNumber(1, 5, 6.6, 11));
-console.log(findMaxNumber(1, 5, '6', '10'));
+// console.log(findMaxNumber(1, 5, 6.6, 11));
+// console.log(findMaxNumber(1, 5, '6', '10'));
+
+
+function fib(num) {
+  let res = '';
+  let a = 0;
+  let b = 1;
+  if (num === 0 || typeof(num) !== 'number' || !Number.isInteger(num) ) return res;
+
+  for (let i = 1; i <= num; i++) {
+    let c = a + b;
+    if (i < 2) {
+      res += a;
+    } else if (i == 3) {
+      res += ' ' + b;
+    } else {
+      a = b;
+      b = c;
+      res += ' ' + c;
+    }   
+   
+  }
+  return res;
+}
+
+console.log(fib(4));
+console.log(fib(7));
+console.log(fib('7'));
+console.log(fib(1));
+console.log(fib(0));
+
+
