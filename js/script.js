@@ -64,7 +64,7 @@ function getTimeFromMinutes(min) {
  
 }
 
-console.log(getTimeFromMinutes(50));
+// console.log(getTimeFromMinutes(50));
 
 
 function findMaxNumber(...arg) {
@@ -110,10 +110,23 @@ function fib(num) {
   return res;
 }
 
-console.log(fib(4));
-console.log(fib(7));
-console.log(fib('7'));
-console.log(fib(1));
-console.log(fib(0));
+// console.log(fib(4));
+// console.log(fib(7));
+// console.log(fib('7'));
+// console.log(fib(1));
+// console.log(fib(0));
 
+
+//  lesson # 31 --  callback functions
+
+function learnJs (str, callback) {
+  console.log(`I learn ${str}`);
+  callback();
+}
+
+function done () {
+  console.log('This is my callback function');
+}
+
+learnJs('JavaScript', done);
 
